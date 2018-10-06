@@ -1,0 +1,15 @@
+plugins {
+  id 'groovy'
+  id 'java-gradle-plugin'
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    testCompile('org.spockframework:spock-core:1.1-groovy-2.4') {
+        exclude group: 'org.codehaus.groovy'
+    }
+}
